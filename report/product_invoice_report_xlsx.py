@@ -53,12 +53,11 @@ class ProductInvoiceXlsx(models.AbstractModel):
             sheet.write(row, col - 6, obj['partner_id'][1])
             sheet.write(row, col - 5, obj['name'])
             # sheet.write(row, col - 4, obj['invoice_line_ids'][1])
-            
             sheet.write(row, col - 3, obj['quantity'])
-            if(obj['product_uom_id'] == True):
-                print("Invoice Lines", obj['product_uom_id'])
             # sheet.write(row, col - 2, obj['product_id'])
             sheet.write(row, col - 1, obj['price_unit'])
             sheet.write(row, col, obj['price_total'])
+            # if(obj['journal_id'][0] == 2):
+            #     print("Invoice Lines", obj['journal_id'][1])
 
         
