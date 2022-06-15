@@ -40,13 +40,18 @@ class ProductInvoice(models.TransientModel):
         data['form'].update(self.read(['start_date', 'end_date'])[0])
         return self.env.ref('product_invoice_report.action_product_invoice').report_action(self, data=data, config=False)
 
+
     # Excel Report
     def check_excel_report(self):
         products = self.env['account.move.line'].search_read([('journal_id', '=', 2)])
+
         data = {
             'products': products,
             'form_data': self.read()[0]
         }
+        
+        return self.print_excel_report(data)
 
+    def print_excel_report(self, data):
         return self.env.ref('product_invoice_report.action_product_invoice_xlsx').report_action(self, data=data, config=False)
         

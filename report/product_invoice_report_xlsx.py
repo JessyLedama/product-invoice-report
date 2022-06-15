@@ -1,7 +1,7 @@
 
 import time
 
-from numpy import product
+# from numpy import product
 from odoo import api, models
 from dateutil.parser import parse
 from odoo.exceptions import UserError
@@ -58,6 +58,6 @@ class ProductInvoiceXlsx(models.AbstractModel):
             sheet.write(row, col - 1, obj['price_unit'])
             sheet.write(row, col, obj['price_total'])
             # if(obj['journal_id'][0] == 2):
-            #     print("Invoice Lines", obj['journal_id'][1])
+            print("INVOICE LINES:", obj['journal_id'][1])
 
         
