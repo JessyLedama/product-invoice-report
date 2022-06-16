@@ -20,21 +20,22 @@
 #################################################################################
 
 {
-    'name': "Product Invoice Report",
+    'name': "KK Custom Module",
     'author': 'SIMI Technologies',
-    'category': 'account_invoicing',
-    'summary': """Report for customer's outstanding invoice amount within the particular date period""",
+    'category': 'Misc',
+    'summary': """Add customisations for KK Empire""",
     'website': 'http://www.simitechnologies.co.ke',
     'license': 'AGPL-3',
     'description': """
+                Add customisations for KK Empire
 """,
     'version': '15.0.1.0',
     'depends': ['base','account', 'report_xlsx'],
-    'data': ['security/ir.model.access.csv',
-             'wizard/product_invoice.xml',
-             'views/product_invoice_report_view.xml',
-             'report/product_invoice_template.xml',
-             'report/product_invoice_report.xml',
+    'data': [#'security/ir.model.access.csv',
+            #  'wizard/product_invoice.xml',
+            #  'views/product_invoice_report_view.xml',
+            #  'report/product_invoice_template.xml',
+            #  'report/product_invoice_report.xml',
              ],
     'installable': True,
     'images': ['static/description/banner.png'],
