@@ -37,6 +37,7 @@
                     <t t-foreach="products" t-as="product">
                         <tr>
                             <td><span t-field="product.product_id"/></td>
+                            <td><span t-field="product.move_id"/></td>
                             <td><span t-field="product.date"/></td>
                             <td><span t-field="product.partner_id"/></td>
                             <td><span t-field="product.product_id"/></td>
