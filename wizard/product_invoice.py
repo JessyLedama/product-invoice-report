@@ -47,9 +47,9 @@ class ProductInvoice(models.TransientModel):
 
         data = {
             'products': products,
-            'form_data': self.read()[0]
+            'form_data': self.read(['start_date', 'end_date'])[0]
         }
-        
+
         return self.print_excel_report(data)
 
     def print_excel_report(self, data):
